@@ -13,17 +13,18 @@ const ToDoList = () => {
                 onKeyDown={(e) => {
                     if(e.key === "Enter"){
                         setToDo(toDO.concat(list));
-                        setToDo("");
+                        setList("");
+                
                     }
-
                 }}
                 placeholder="Escribe tu tarea aquí..." />
                 <ul>
                     {toDO.map((item, index) => (
-                        <li key={index} onClick={setToDo(toDO.filter(itme, index) => index != currentIndex)}>{item}</li>
+                        <li key={index}>{item}</li>
                     ))
                     }
                 </ul>
+                <div>{toDO.length}tareas</div>
             </div>
 
         </div>
